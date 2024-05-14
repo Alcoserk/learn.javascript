@@ -1,0 +1,9 @@
+let styles = ["Джаз", "Блюз"];
+styles.push("Рок-н-ролл");
+for(let style of styles){
+    let l = styles.length
+    styles[(l/ 2) - 0.5] = "Классика";
+};
+console.log(styles.shift());
+styles.unshift("Рэп", "Регги");
+console.log(styles)
