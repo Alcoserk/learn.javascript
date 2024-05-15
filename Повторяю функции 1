@@ -1,17 +1,17 @@
 function sumInput(){
     let total = 0;
-    while(0 < 1){
+    while(true){
         let inputNum = prompt("Введите число");
-        if(inputNum === "" || inputNum === null){
+        // Если ввод пустой или null, выходим из цикла
+        if (inputNum === "" || inputNum === null) {
+            break;
+        }
+        if(isFinite(inputNum)){
+            total += +inputNum; // Преобразуем строку в число с помощью унарного плюса
+        } else {
             alert("Вы ввели не число");
             break;
         }
-        let number = parseInt(inputNum);
-        if(!isNaN(number)){
-            total += number;
-        }else{
-            break;
-        };
     }
     alert(total);
 };
