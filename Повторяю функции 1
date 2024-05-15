@@ -17,3 +17,26 @@ function sumInput(){
 };
 
 sumInput();
+
+
+
+function sumInput(){ // через массив
+    let total = [];
+    let sum = 0
+    while(0 < 1){
+        let inputNum = prompt("Введите число");
+        if(inputNum === "" || inputNum === null){
+            alert("Вы ввели не число");
+            break;
+        }
+        let number = parseInt(inputNum);
+        if(!isNaN(number)){
+            sum += number;
+        }else{
+            break;
+        };
+    }
+    alert(sum);
+};
+
+sumInput();
