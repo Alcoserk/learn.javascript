@@ -1,0 +1,19 @@
+function sumInput(){
+    let total = 0;
+    while(0 < 1){
+        let inputNum = prompt("Введите число");
+        if(inputNum === "" || inputNum === null){
+            alert("Вы ввели не число");
+            break;
+        }
+        let number = parseInt(inputNum);
+        if(!isNaN(number)){
+            total += number;
+        }else{
+            break;
+        };
+    }
+    alert(total);
+};
+
+sumInput();
