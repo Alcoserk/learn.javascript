@@ -19,24 +19,31 @@ function sumInput(){
 sumInput();
 
 
-
-function sumInput(){ // через массив
+Решение через массив
+function sumInput(){
     let total = [];
-    let sum = 0
-    while(0 < 1){
-        let inputNum = prompt("Введите число");
-        if(inputNum === "" || inputNum === null){
-            alert("Вы ввели не число");
+    let sum = 0;
+    while (true){
+        let enter_num = prompt("Введите цифру");
+        if(enter_num === '' || enter_num === null){
+            alert("Пустое значение");
             break;
         }
-        let number = parseInt(inputNum);
-        if(!isNaN(number)){
-            sum += number;
+        let num = parseInt(enter_num);
+        if(!isNaN(num)){
+            total.push(num);
+            console.log("Зашел в 2 иф и запушило в тотал" + total);
         }else{
             break;
-        };
+        }
     }
+    total.forEach(function(total){
+        sum += total;
+    });
     alert(sum);
+};
+
+sumInput();
 };
 
 sumInput();
